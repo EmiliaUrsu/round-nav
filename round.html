@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Round Nav | :target</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <style>
+        body{
+            background-color:#666;
+        }
+        a{
+            color:white;
+        }
+        .round {
+            width: 200px;
+            height: 200px;
+            background-color:lightgrey;
+            border-radius: 100%;
+            border: 3px #777 ridge;
+              
+        }
+        
+        .round a{
+            display: block;
+            color:orange;
+            font-size: 15px;
+            height: 10px;
+            padding: 1px;
+            margin-bottom: -12px;
+        }
+        
+        .round a:nth-child(4){
+            transform: translateY(94px) rotate(-135deg);
+            
+        }
+        .round a:nth-child(3){
+            transform: translateY(94px) rotate(-180deg);
+            
+        }
+        .round a:nth-child(2){
+            transform: translateY(94px) rotate(-225deg);
+            
+        }
+        .round a:nth-child(1){
+            transform: translateY(94px) rotate(-270deg);
+            
+        }
+        .round a:nth-child(4) i{
+            transform: rotate(135deg);
+        }
+        .round a:nth-child(3) i{
+            transform: rotate(180deg);
+        }
+        .round a:nth-child(2) i{
+            transform: rotate(135deg);
+        }
+        .round a:nth-child(1) i{
+            transform: rotate(270deg);
+        }
+        .round #first{
+            width: 150px;
+            height: 150px;
+            transform: translateX(25px) translateY(31px);
+            border-radius: 100%;
+            background-color:lightgray;
+        }
+        .round .indicator {
+            width: 160px;
+            height: 10px;
+            background-color: #333;
+            margin-left: -20px;
+            transform: translateX(12px) translateY(71px) rotate(-270deg);
+        }
+        
+        #first:target{
+           
+        }
+        #second:target .indicator{
+            transform: translateY(71px)  rotate(-225deg);
+        }
+        #third:target .indicator{
+            transform: translateY(71px)  rotate(-180deg);
+        }
+        #fourth:target .indicator{
+            transform: translateY(71px)  rotate(-135deg);
+        }
+        .round div.indicator  i {
+            transform:translateX(-6px) translateY(-19px) ;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="round">
+        
+        <a href="#first"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="#second"><i class="fab fa-instagram"></i></a>
+        <a href="#third"><i class="fab fa-twitter"></i></a>
+        <a href="#fourth"><i class="fab fa-vk"></i></a>
+
+        <div id="first">
+        <div id="second">
+        <div id="third">
+        <div id="fourth">
+            <div class="indicator"><i class="fas fa-caret-left fa-3x" ></i></div>
+            </div>
+            </div>
+            </div>
+        </div>
+     
+    </nav>
+</body>
+</html>
